@@ -23,7 +23,7 @@ style: |
 # 🥋 DOJO DE AGENTES
 ## Agentes de IA & Fluxos
 
-### 🚀 Antigravity • Agents • Rules • Skills • Workflows • Canonical Cycle
+### 🚀 Antigravity • Agents • Rules • Skills • Workflows • SDD • MCP • Canonical Cycle
 
 ---
 
@@ -43,6 +43,8 @@ style: |
 ---
 
 # 🤖 1. Agentes de IA
+
+**Documentação Oficial:** [antigravity.google/docs/skills](https://antigravity.google/docs/skills)
 
 **O que são?**
 Sistemas de software autônomos capazes de perceber seu ambiente, raciocinar sobre ele e tomar ações para atingir objetivos específicos. Diferente de um "chatbot" passivo, um agente tem **autonomia** e **capacidade de execução**.
@@ -184,6 +186,22 @@ Conversar "de boca" com a IA gera loops de erro, esquecimento de contexto e aluc
 
 ---
 
+# 📝 Exemplo Prático de SDD
+
+**1. O Humano escreve a Spec (`feature-login.md`):**
+
+```markdown
+# Funcionalidade de Login
+- O usuário deve logar com email e senha.
+- Se errar 3 vezes, bloquear por 15min.
+- Retornar erro 401 se credenciais inválidas.
+```
+
+**2. O Agente lê e Implementa:**
+O agente gera o código **exatamente** como definido nos business rules do Markdown, sem inventar moda ou esquecer detalhes.
+
+---
+
 # 🔌 8. MCP: Model Context Protocol
 
 **Como conectar a IA ao mundo real?**
@@ -198,11 +216,33 @@ O **MCP** é um padrão aberto que permite ao Agente atuar fora da IDE.
 
 ---
 
+# ⚙️ Exemplo de Configuração (Rovo)
+
+Para conectar o Atlassian Rovo (Jira/Confluence), basta adicionar ao `mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "rovo": {
+      "command": "/home/sabino/.local/bin/mcp-npx-node24",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/sse"
+      ]
+    }
+  }
+}
+```
+
+---
+
 
 <!-- _class: lead -->
 
 # 🔄 O Canonical Cycle
 ## Framework de Consistência e Verdade
+🔗 [github.com/SabinoWS/canonicalCycle](https://github.com/SabinoWS/canonicalCycle)
 
 ---
 
@@ -253,5 +293,18 @@ O ciclo conecta especialistas em carrossel. O artefato de um vira o **Raw** do o
 5. **💻 Desenvolvedor**: Codifica → *Commits / PRs*
 
 > **Atalho**: Roles como Designer e Arquiteto são opcionais e puláveis.
+
+---
+
+<!-- _class: lead -->
+
+# 💬 Conversa & Experimentos
+
+### Espaço Aberto
+
+- 🧪 Mostrar outros experimentos
+- ❓ Dúvidas e Discussões
+- 🚀 Próximos Passos
+
 
 
