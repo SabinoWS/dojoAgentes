@@ -1,0 +1,235 @@
+---
+marp: true
+theme: gaia
+class: invert
+paginate: true
+header: '🥋 Dojo de Agentes'
+# footer: '2025 © Dojo Agentes'
+backgroundColor: #111
+style: |
+  section {
+    font-family: 'Arial', sans-serif;
+  }
+  h1 {
+    color: #4facfe;
+  }
+  strong {
+    color: #00f2fe;
+  }
+---
+
+<!-- _class: lead -->
+
+# 🥋 DOJO DE AGENTES
+## Agentes de IA & Fluxos
+
+### 🚀 Antigravity • Agents • Rules • Skills • Workflows • Canonical Cycle
+
+---
+
+<!-- class: default -->
+
+# 📅 Agenda do Dia
+
+1. **Introdução** aos Agentes de IA
+    - O que são e como funcionam?
+2. **Setup do Agente** 🛠️
+    - Rules, Skills e Workflows
+3. **Antigravity** (Google Deepmind)
+4. **Canonical Cycle** 🔄
+    - Uma mistura de metodologias
+5. **Debate e Próximos Passos** 🚀
+
+---
+
+# 🤖 1. Agentes de IA
+
+**O que são?**
+Sistemas de software autônomos capazes de perceber seu ambiente, raciocinar sobre ele e tomar ações para atingir objetivos específicos. Diferente de um "chatbot" passivo, um agente tem **autonomia** e **capacidade de execução**.
+
+---
+
+
+**Para que servem?**
+Para automatizar tarefas complexas que exigem tomada de decisão, uso de ferramentas e múltiplos passos, atuando como um "parceiro de trabalho".
+
+> **Exemplo Simples:**
+> Um agente que monitora seu repositório git, detecta PRs abertos, roda os testes e, se falhar, comenta sugerindo a correção. O chat do antigravity pode ser usado para interagir com o agente.
+
+---
+
+# 🧠 2. Por que configurar o Agente?
+
+**1. Eficiência de Contexto**
+Em vez de repetir *"eu uso Clean Code e testes em Jest"* todo dia, isso vira uma **Rule** permanente.
+
+**2. Memória de Longo Prazo**
+O agente "lembra" como operar seu sistema e ferramentas via **Skills**, sem você precisar colar documentação técnica a cada prompt.
+
+---
+
+
+**3. Comandos Naturais**
+
+Transforme prompts gigantes e detalhados em pedidos simples do dia a dia.
+
+<div style="background-color: #2a2a2a; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 6px solid #ff5f5f; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+  <div style="color: #ff5f5f; font-weight: bold; font-size: 1.1em; margin-bottom: 8px;"><strong>❌ Antes (Verboso)</strong></div>
+  <div style="color: #aaa; font-style: italic;">
+    "Por favor, faça o deploy, lembrando de rodar testes, verificar a tag, confirmar no chat..."
+  </div>
+</div>
+
+<div style="background-color: #1a2e33; padding: 20px; border-radius: 12px; border-left: 6px solid #4facfe; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+  <div style="color: #4facfe; font-weight: bold; font-size: 1.1em; margin-bottom: 8px;"><strong>✅ Depois (Natural)</strong></div>
+  <div style="color: #fff; font-size: 1.4em; font-weight: bold;">
+    "Faça o deploy."
+  </div>
+</div>
+
+---
+
+# 📏 3. Rules (Regras)
+
+**O que são?**
+Diretrizes explícitas e imutáveis que governam o comportamento do agente. São o "contexto sistêmico" que garante segurança, conformidade e estilo.
+
+**Para que servem?**
+Para evitar que o agente tome ações indesejadas (ex: apagar banco de produção) e para forçar padrões de qualidade (ex: sempre escrever testes).
+
+---
+
+
+> **Exemplo Simples:**
+> `Regra: "Nunca altere arquivos de configuração (.env, docker-compose) sem pedir confirmação explícita ao usuário."`
+
+---
+
+# 🛠️ 4. Skills (Habilidades)
+
+**O que são?**
+Pacotes de conhecimento operacional. Uma Skill ensina ao agente **como** usar uma ferramenta específica, uma API ou executar um procedimento técnico complexo.
+
+**Para que servem?**
+Para expandir o "canivete suíço" do agente. Em vez de apenas gerar texto, ele aprende a interagir com o mundo real (Jira, AWS, Kubernetes).
+
+---
+
+
+> **Exemplo Simples:**
+> **Skill: `git-ops`**
+> Ensina o agente a fazer `git checkout -b`, `git add`, `git commit` seguindo o padrão Conventional Commits do time.
+
+---
+
+# 🔀 5. Workflows (Fluxos)
+
+**O que são?**
+Sequências orquestradas de tarefas. Um Workflow é um "roteiro" passo-a-passo que o agente segue para completar um objetivo maior, garantindo consistência no processo.
+
+**Para que servem?**
+Para padronizar processos repetitivos e propensos a erro humano, como deploys, onboadings ou migrações de banco de dados.
+
+---
+
+
+> **Exemplo Simples:**
+> **Workflow: `deploy-production`**
+> 1. Acessar job no Jenkins.
+> 2. Identificar a tag de release (user input).
+> 3. Preencher parâmetros de build.
+> 4. Submeter deploy e notificar Discord.
+
+---
+
+# 🌌 6. Antigravity (Google)
+
+**O que é?**
+Um agente avançado de codificação desenvolvido pelo Google Deepmind. Ele opera direto na sua IDE e terminal, combinando LLMs poderosos com acesso seguro a ferramentas do sistema (shell, editor de arquivos, browser).
+
+---
+
+**Para que serve?**
+Para atuar como um engenheiro de software pleno/sênior em par com você. Ele entende contexto de projeto, navega em arquivos, refatora código e até corrige bugs de forma autônoma.
+
+> **Exemplo Simples:**
+> "Antigravity, refatore este controller para usar o padrão Repository e crie os testes unitários para a nova classe."
+
+---
+
+<!-- _class: lead -->
+
+# 🔄 O Canonical Cycle
+## Framework de Consistência e Verdade
+
+---
+
+# 🏛️ Filosofia: O Contrato IA-Humano
+
+1. **IA nunca decide a verdade**: Apenas propõe interpretações.
+2. **Humano nunca reinterpreta raw material sozinho**: Usa o fluxo estruturado.
+3. **Canonical Material é o Ponto de Controle**: Onde a verdade é firmada.
+
+---
+
+
+### Os 3 Pilares
+- **🏗️ Bancada (Workspace Agent)**: Contexto de código e produto.
+- **🔄 Regras (Canonical Agent)**: Guardião do processo.
+- **🌐 Externo (MCPs)**: Dados do Jira, Web, Docs.
+
+---
+
+# 🌊 O Fluxo do Ciclo
+
+**A Jornada da Informação:**
+`Raw` ➡️ `Filtered` ➡️ `Canonical` ➡️ `Artifacts` ➡️ `Delivery`
+
+---
+
+
+- **🧱 Raw**: Dados brutos (reuniões, anotações). *Sem verdade.*
+- **🔍 Filtered**: IA estrutura e organiza. *Proposta.*
+- **🏛️ Canonical**: Humano aprova. **VERDADE.**
+- **📄 Artifacts**: Tickets, Docs, Código. *Descartáveis.*
+- **🚀 Delivery**: O mundo real (Deploy, PR, Publish).
+
+---
+
+# 👥 Roles Sequenciais
+
+O ciclo conecta especialistas em carrossel. O artefato de um vira o **Raw** do outro.
+
+1. **🕵️ Analista**: Entende o negócio → *Requisitos*
+2. **🎨 Designer**: Cria a experiência → *Protótipos*
+3. **🏛️ Arquiteto**: Define a estrutura → *ADRs / Diagramas*
+
+---
+
+
+4. **⚙️ Engenheiro**: Planeja a mudança → *Tasks Técnicas*
+5. **💻 Desenvolvedor**: Codifica → *Commits / PRs*
+
+> **Atalho**: Roles como Designer e Arquiteto são opcionais e puláveis.
+
+---
+
+# 📜 As Regras de Ouro
+
+1. ❌ **Nada gera artefato sem Canonical.** (Sem atalhos!)
+2. ✅ **Toda decisão tem aprovação humana.**
+3. 🔁 **Mudou o contexto? Novo ciclo.** (Reentrância)
+
+---
+
+
+4. 🔗 **Artefatos são filhos do Canonical.**
+5. 🗑️ **Artefatos são descartáveis**, o Canonical é eterno (na pasta `archives/`).
+
+```
+archives/
+  └── ciclo_01/
+      ├── analista/
+      ├── engenheiro/
+      └── desenvolvedor/
+```
