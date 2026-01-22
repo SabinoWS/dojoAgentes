@@ -29,15 +29,15 @@ style: |
 
 <!-- class: default -->
 
-# 📅 Agenda do Dia
+# 📅 Agenda
 
 1. **Introdução** aos Agentes de IA
     - O que são e como funcionam?
 2. **Setup do Agente** 🛠️
     - Rules, Skills e Workflows
-3. **Antigravity** (Google Deepmind)
+3. **Metodologias** 📚
+    - Memória, SDD e MCP
 4. **Canonical Cycle** 🔄
-    - Uma mistura de metodologias
 5. **Debate e Próximos Passos** 🚀
 
 ---
@@ -61,10 +61,10 @@ Para automatizar tarefas complexas que exigem tomada de decisão, uso de ferrame
 # 🧠 2. Por que configurar o Agente?
 
 **1. Eficiência de Contexto**
-Em vez de repetir *"eu uso Clean Code e testes em Jest"* todo dia, isso vira uma **Rule** permanente.
+Em vez de repetir *"eu uso Arquitetura Hexagonal e testes em Jest"* todo dia, isso vira uma **Rule/Skill/Workflow** permanente.
 
 **2. Memória de Longo Prazo**
-O agente "lembra" como operar seu sistema e ferramentas via **Skills**, sem você precisar colar documentação técnica a cada prompt.
+O agente "lembrará" como operar seu sistema e ferramentas via **Skills**, sem você precisar colar documentação técnica a cada prompt.
 
 ---
 
@@ -76,7 +76,7 @@ Transforme prompts gigantes e detalhados em pedidos simples do dia a dia.
 <div style="background-color: #2a2a2a; padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 6px solid #ff5f5f; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
   <div style="color: #ff5f5f; font-weight: bold; font-size: 1.1em; margin-bottom: 8px;"><strong>❌ Antes (Verboso)</strong></div>
   <div style="color: #aaa; font-style: italic;">
-    "Por favor, faça o deploy, lembrando de rodar testes, verificar a tag, confirmar no chat..."
+    "Por favor, faça o deploy, lembrando de rodar testes, verificar a tag, confirmar no chat, um commit no padrão tal e depois push e deploy no Jenkins no job X ... +++"
   </div>
 </div>
 
@@ -86,6 +86,21 @@ Transforme prompts gigantes e detalhados em pedidos simples do dia a dia.
     "Faça o deploy."
   </div>
 </div>
+
+---
+
+# 📂 A Estrutura `.agent`
+
+A "bancada" do seu Agente é organizada em pastas específicas para garantir modularidade:
+
+```
+.agent/
+ ├── rules/       # 🧠 Contexto e Diretrizes (O que saber?)
+ ├── skills/      # 🛠️ Ferramentas (Como fazer?)
+ └── workflows/   # 📋 Processos (O que fazer passo-a-passo?)
+```
+
+Se não está aqui, o agente **não sabe**. (a menos que pedido explicitamente)
 
 ---
 
@@ -111,7 +126,7 @@ Para evitar que o agente tome ações indesejadas (ex: apagar banco de produçã
 Pacotes de conhecimento operacional. Uma Skill ensina ao agente **como** usar uma ferramenta específica, uma API ou executar um procedimento técnico complexo.
 
 **Para que servem?**
-Para expandir o "canivete suíço" do agente. Em vez de apenas gerar texto, ele aprende a interagir com o mundo real (Jira, AWS, Kubernetes).
+Para expandir o "canivete suíço" do agente. Em vez de apenas gerar texto, ele se especializa em algo e também pode aprender a interagir com o mundo real (Jira, AWS, Kubernetes).
 
 ---
 
@@ -142,20 +157,47 @@ Para padronizar processos repetitivos e propensos a erro humano, como deploys, o
 
 ---
 
-# 🌌 6. Antigravity (Google)
+# 🧠 6. Memória por Arquivo (vs Chat)
 
-**O que é?**
-Um agente avançado de codificação desenvolvido pelo Google Deepmind. Ele opera direto na sua IDE e terminal, combinando LLMs poderosos com acesso seguro a ferramentas do sistema (shell, editor de arquivos, browser).
+**A Filosofia "Manus":**
+O chat é efêmero, volátil e não confiável para guardar decisões.
+
+- **Chat**: Apenas para pedir, ajustar e comandar.
+- **Arquivo (.md)**: A única fonte de verdade e persistência.
+
+Se você não escreveu no arquivo, para a IA, **não existe**.
+*Mantenha a documentação viva e o contexto salvo.*
+
+---
+
+# 📜 7. Spec Driven Development (SDD)
+
+**O problema do Chat:**
+Conversar "de boca" com a IA gera loops de erro, esquecimento de contexto e alucinações ("telefone sem fio").
+
+**A solução SDD:**
+1. Escreva o que você quer num arquivo Markdown (Spec).
+2. A IA lê a Spec.
+3. A IA implementa baseado na Spec (não na sua memória).
+
+> "O Markdown é a API de comunicação entre Humano e Agente."
 
 ---
 
-**Para que serve?**
-Para atuar como um engenheiro de software pleno/sênior em par com você. Ele entende contexto de projeto, navega em arquivos, refatora código e até corrige bugs de forma autônoma.
+# 🔌 8. MCP: Model Context Protocol
 
-> **Exemplo Simples:**
-> "Antigravity, refatore este controller para usar o padrão Repository e crie os testes unitários para a nova classe."
+**Como conectar a IA ao mundo real?**
+O **MCP** é um padrão aberto que permite ao Agente atuar fora da IDE.
+
+- **Ler tickets no Jira** 🎫
+- **Consultar documentação no Confluence** 📚
+- **Acessar Banco de Dados** 🗄️
+- **Pesquisar na Web** 🌐
+
+É a ponte segura entre o "cérebro" da IA e os dados da sua empresa.
 
 ---
+
 
 <!-- _class: lead -->
 
@@ -212,24 +254,4 @@ O ciclo conecta especialistas em carrossel. O artefato de um vira o **Raw** do o
 
 > **Atalho**: Roles como Designer e Arquiteto são opcionais e puláveis.
 
----
 
-# 📜 As Regras de Ouro
-
-1. ❌ **Nada gera artefato sem Canonical.** (Sem atalhos!)
-2. ✅ **Toda decisão tem aprovação humana.**
-3. 🔁 **Mudou o contexto? Novo ciclo.** (Reentrância)
-
----
-
-
-4. 🔗 **Artefatos são filhos do Canonical.**
-5. 🗑️ **Artefatos são descartáveis**, o Canonical é eterno (na pasta `archives/`).
-
-```
-archives/
-  └── ciclo_01/
-      ├── analista/
-      ├── engenheiro/
-      └── desenvolvedor/
-```
