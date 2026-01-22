@@ -22,6 +22,7 @@ style: |
 
 # 🥋 DOJO DE AGENTES
 ## Agentes de IA & Fluxos
+🔗 [github.com/SabinoWS/dojoAgentes](https://github.com/SabinoWS/dojoAgentes)
 
 ### 🚀 Antigravity • Agents • Rules • Skills • Workflows • SDD • MCP • Canonical Cycle
 

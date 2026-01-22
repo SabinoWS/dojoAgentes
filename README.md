@@ -1,43 +1,37 @@
 # Dojo de Agentes, Antigravity & Engenharia de Software
 
-Este repositório é dedicado a um Dojo focado no estudo e prática de Agentes de IA (com ênfase no **Antigravity** do Google), e na estruturação de fluxos de trabalho eficientes para engenharia de software moderna.
+Este repositório é dedicado a um **Dojo Baby Steps**, focado no repasse de conhecimento prático sobre a configuração de Agentes de IA, seus métodos e fluxos de trabalho (com ênfase no **Antigravity** do Google).
 
-Aqui exploraremos conceitos fundamentais como **Rules**, **Skills**, **Workflows** e a aplicação do **Canonical Cycle** para análise e desenvolvimento de soluções.
-
----
-
-## 🔄 O Canonical Cycle
-
-O **Canonical Cycle** é uma metodologia de fluxo de trabalho projetada para padronizar e otimizar o desenvolvimento e a análise de software. Ele atua como um guia estruturado para garantir que nenhuma etapa crítica seja negligenciada, desde a concepção até a implementação.
+Aqui vamos explorar, degrau por degrau, conceitos fundamentais e a aplicação do **Canonical Cycle** para análise e desenvolvimento de soluções.
 
 ---
 
-## 🤖 Conceitos Chave
+## 🏗️ Tópicos Abordados
 
-### 1. Antigravity (Agente Google)
-O **Antigravity** é um agente de IA avançado desenvolvido pelo Google Deepmind, focado em codificação agêntica ("Agentic Coding"). Ele não apenas completa código, mas atua como um par programador capaz de:
-*   Executar comandos no terminal.
-*   Manipular arquivos e diretórios.
-*   Navegar na web e usar ferramentas externas (MCP).
-*   Seguir instruções complexas de alto nível.
+### 🤖 Agentes & Antigravity
+Sistemas autônomos que atuam como pares de trabalho, capazes de executar comandos, manipular arquivos e raciocinar sobre tarefas complexas. O foco é sair do modelo "chatbot" para o modelo "agente executor".
 
-### 2. Rules (Regras)
-Diretrizes explícitas que o agente **DEVE** seguir sempre. Elas definem os limites e o comportamento padrão do agente para garantir segurança, consistência e qualidade.
-*   *Exemplos:* "Sempre escreva testes antes do código", "Nunca delete arquivos sem permissão", "Responda em Português".
+### 🛠️ Configuração: Rules, Skills & Workflows
+A estrutura modular que dá vida ao agente:
+*   **Rules**: O contexto imutável e regras de segurança (o que *não* fazer).
+*   **Skills**: Ferramentas e habilidades técnicas (como usar git, como fazer deploy).
+*   **Workflows**: Processos passo-a-passo para tarefas repetitivas.
 
-### 3. Skills (Habilidades)
-Conjuntos de instruções, scripts e ferramentas especializadas que estendem as capacidades do agente. Uma Skill ensina ao agente **como** realizar uma tarefa específica e complexa.
-*   *Exemplos:* Uma Skill para fazer deploy em Kubernetes, uma Skill para refatorar componentes Legacy, ou uma Skill para rodar o `Canonical Cycle`.
+### 📜 SDD (Spec Driven Development)
+Metodologia onde o **Markdown** serve como contrato e API entre humano e IA. Em vez de chats efêmeros, escrevemos especificações claras (`Specs`) que o agente lê e implementa, garantindo fidelidade aos requisitos.
 
-### 4. Workflows (Fluxos de Trabalho)
-Sequências de passos bem definidos para atingir um objetivo concreto. Diferente das Skills (que são capacidades), os Workflows são **receitas** ou **procedimentos**.
-*   *Exemplos:* "Workflow de Deploy em Produção", "Workflow de Onboarding de Novo Desenvolvedor", "Workflow de Triage de Bugs".
+### 🧠 Memória por Arquivo
+A filosofia de que "se não está num arquivo, não existe". Abandonamos a memória volátil do chat em favor da persistência documental na codebase.
+
+### 🔌 MCP (Model Context Protocol)
+O padrão aberto que conecta a IA ao mundo externo. Permite que o agente acesse com segurança dados do **Jira**, **Confluence**, **Bancos de Dados** e **Web**, expandindo seu contexto além do editor de código.
+
+### 🔄 O Canonical Cycle
+Um framework de trabalho para garantir consistência e verdade no desenvolvimento com IA.
+*   **Fluxo**: `Raw` (Bruto) → `Filtered` (Organizado) → `Canonical` (Verdade Aprovada) → `Artifacts` (Produtivos) → `Delivery` (Entrega).
+*   **Filosofia**: A IA propõe, o Humano aprova (torna canônico), e a partir daí a execução é determinística.
 
 ---
 
-## 🎯 Objetivos deste Dojo
-
-*   Documentar e evoluir o **Canonical Cycle**.
-*   Criar e testar novas **Rules**, **Skills** e **Workflows**.
-*   Experimentar com as capacidades do **Antigravity**.
-*   Servir de base de conhecimento para o time.
+## 🎯 Objetivo
+Servir como guia prático e base de conhecimento para o time iniciar na **Engenharia de Software Agêntica**.
