@@ -16,6 +16,8 @@ Como Desenvolvedor no Canonical Cycle, seu foco é escrever código limpo, test�
     *   Siga TDD (Test Driven Development) sempre que possível.
     *   Respeite os linters e padrões do projeto.
     *   Commits atômicos e descritivos.
+    *   **IMPORTANTE**: Jamais inclua paths completos de arquivos nas mensagens de commit.
+    *   **IDIOMA**: As mensagens de commit devem ser escritas em **Português (pt-BR)**.
 
 ## Workflow Típico
 1.  Ler Canonical Material.

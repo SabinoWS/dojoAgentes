@@ -60,6 +60,12 @@ Para automatizar tarefas complexas que exigem tomada de decisão, uso de ferrame
 
 ---
 
+<!-- _class: lead -->
+
+# Configurando agent
+
+---
+
 # 🧠 2. Por que configurar o Agente?
 
 **1. Eficiência de Contexto**
@@ -90,6 +96,7 @@ Transforme prompts gigantes e detalhados em pedidos simples do dia a dia.
 </div>
 
 ---
+
 
 # 📂 A Estrutura `.agent`
 
@@ -156,6 +163,12 @@ Para padronizar processos repetitivos e propensos a erro humano, como deploys, o
 > 2. Identificar a tag de release (user input).
 > 3. Preencher parâmetros de build.
 > 4. Submeter deploy e notificar Discord.
+
+---
+
+<!-- _class: lead -->
+
+# Conceitos e Metodologias
 
 ---
 

@@ -26,6 +26,10 @@ Este workflow garante que o código seja enviado com a identidade correta, separ
 
 ## 4. Commit
 1.  Gere uma mensagem de commit baseada nas alterações em stage, seguindo padrões de boas práticas (Conventional Commits).
+    *   **IMPORTANTE**: Não inclua paths completos de arquivos na mensagem. Use apenas nomes de arquivos ou descrições funcionais.
+    *   **IDIOMA**: A mensagem deve estar sempre em **Português (pt-BR)**.
+
+
 2.  **Apresente** a mensagem sugerida ao usuário e peça: "Posso commitar com esta mensagem? (Responda 'Sim' ou forneça uma nova mensagem)".
 3.  Se aprovado, execute `git commit -m "Sua Mensagem"`.
 
